@@ -1,0 +1,6 @@
+@import "mixin-and-variables", "header", "about", "services", "projects", "team", 'news', 'footer', 'contact', 'content-page';
+.view-content{
+  h2{
+    display: none;
+  }
+}

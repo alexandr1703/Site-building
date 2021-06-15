@@ -1,0 +1,234 @@
+@import "mixin-and-variables";
+.container{
+  margin: 0 auto;
+  max-width: 1300px;
+  background: transparent;
+  border: none;
+}
+.navbar{
+  .container{
+    max-width: 1220px;
+  }
+}
+
+.region-navigation-collapsible{
+  display: flex;
+}
+header{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url("../img/header.png") no-repeat ;
+  background-size: cover;
+  background-position: center center;
+  #block-exam-main-menu{
+      ul{
+        display: flex;
+        align-items: center;
+        background: #fff;
+        list-style:none;
+        margin-bottom: 0;
+        padding-left: 0;
+        li{
+          margin: 34px 8px 32px;
+          &:first-child{
+            height: 50px;
+            background: url("../img/Homepage-menu.png") no-repeat 100%;
+            a{
+              opacity: 0;
+            }
+
+          }
+          a{
+            text-transform: uppercase;
+            color: #373645;
+            padding-bottom: 44px;
+            &:hover{
+              text-decoration: none;
+              border-bottom: 7px solid #6e9bca;
+            }
+          }
+        }
+      }
+  }
+
+  .block-social-media-links{
+    background: #fff;
+    display: flex;
+    align-items: center;
+  }
+  #block-searchform{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    .form-control{
+      padding: 17px 12px;
+    }
+    .form-control::placeholder{
+      display: none;
+      opacity: 0;
+    }
+    .button{
+      background: white;
+      border-color: $gray;
+      padding: 5px;
+      .icon{
+        color: $gray;
+      }
+      .glyphicon{
+        margin-top: -2.5px;
+        top: 3.5px;
+        &:before{
+          font-size: 21px;
+        }
+
+      }
+    }
+  }
+
+}
+#block-logo{
+  @include logo;
+}
+#block-headertext{
+  margin-bottom: 260px;
+  margin-top: 145px;
+  h2{
+    color: #fff;
+    font-size: 64px;
+    line-height: 23px;
+  }
+  h3{
+    color: #373645;
+    font-size: 38px;
+    line-height: 23px;
+  }
+  p{
+    color: #6f9ccb;
+    line-height:15px;
+  }
+}
+.region-navigation{
+  display: flex;
+}
+.navbar-default{
+  .navbar-toggle{
+    margin-top: -80px;
+    background: $white;
+    .icon-bar{
+      widows: 35px;
+      height: 4px;
+      background-color: $maintxt;
+    }
+  }
+}
+
+@media (max-width: 1299px){
+  header{
+    nav{
+      ul{
+        li{
+          margin: 34px 6px 33px;
+          a{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .block-social-media-links{
+      display: none;
+    }
+    .search-block-form{
+      padding: 15px 15px 0;
+    }
+  }
+  #block-headertext{
+    margin-bottom: 190px;
+  }
+}
+@media (max-width:991px){
+  header{
+    #block-searchform{
+      display: none;
+    }
+    nav {
+      ul {
+        padding-left: 0;
+        li {
+          margin: 34px 6px 33px;
+
+          a {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+  #block-headertext{
+    h2{
+      font-size: 48px;
+      line-height: 14px;
+    }
+    h3{
+      font-size: 30px;
+      line-height: 14px;
+    }
+  }
+}
+@media (max-width: 767px){
+  #block-headertext{
+    display: none;
+  }
+  #block-logo{
+    margin-left: 15px;
+  }
+  .region-navigation-collapsible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    nav{
+      width: 100%;
+    }
+  }
+  header{
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 500px){
+  .region-navigation-collapsible{
+      #block-exam-main-menu{
+        ul{
+          flex-direction: column;
+          li{
+            margin: 9px 8px 9px;
+
+            &:first-child{
+              margin:0 29px 0 0;
+            }
+            a{
+              font-size: 20px;
+              padding-top: 12px;
+              padding-bottom: 12px;
+              &:hover{
+                color: $blue;
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+@media (max-width: 440px){
+  #block-headertext{
+   display: none;
+  }
+  #block-logo{
+    padding: 10px;
+  }
+}
+@media (min-width: 1330px){
+  .navbar-collapse{
+    width: 1220px;
+  }
+}

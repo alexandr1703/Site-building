@@ -1,0 +1,150 @@
+@import "mixin-and-variables";
+.slide-content{
+  text-align: center;
+  background: repeating-linear-gradient(-60deg, #dbdbdb 0, #dbdbdb 1px, transparent 1px, transparent 5px);
+  .views-field-title{
+    font-size: 25px;
+    a{
+      color: $maintxt;
+
+    }
+  }
+  .col{
+    img{
+      margin: 0 auto;
+      margin-bottom: 40px;
+      width: 50%;
+      height: auto;
+      &:hover{
+        opacity: 70%;
+      }
+    }
+  }
+}
+.slidee{
+  width: 40%;
+  margin: 0 auto 30px;
+  .slick__slide{
+    text-align: center;
+    img{
+      margin: 0 auto;
+      transition: 0.5s;
+      &:hover{
+        opacity: 70%;
+      }
+    }
+    .views-field-title{
+      font-size: 18px;
+      font-weight: bold;
+      a{
+        color: $maintxt;
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .slidee{
+    width: 55%;
+  }
+}
+.services{
+ text-align: center;
+  padding: 0 20px;
+  .block-field-blocknodeservicestitle{
+    font-size: 30px;
+    color: $maintxt;
+  }
+  .field--name-field-image-services{
+    img{
+      margin: 15px auto 15px;
+    }
+  }
+}
+.project-content{
+  text-align: center;
+  padding: 0 20px;
+  .block-field-blocknodeproject-title{
+    font-size: 30px;
+    color: $maintxt;
+  }
+  .field--name-field-image-project{
+    img{
+      margin: 15px auto 15px;
+    }
+  }
+  .field--name-field-taxonomy-project{
+    float: left;
+    font-size: 15px;
+    a[href*="/project/php-development"]{
+      color: #a161b9;
+    }
+    a[href*="/project/drupal-project"]{
+      color: #2baae0;
+    }
+    a[href*="/project/app-development"]{
+      color: #e84c3d;
+    }
+    a[href*="/project/web-development"]{
+      color: #1bbc9b;
+    }
+  }
+}
+.view-team{
+  table{
+    thead{
+      display: none;
+    }
+    tr{
+      .views-field-title{
+        a{
+          color: $maintxt;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 840px){
+  .view-team{
+    table{
+      thead{
+        display: none;
+      }
+      tr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+
+      }
+    }
+  }
+}
+ .team-content{
+   text-align: center;
+   padding: 0 20px;
+   .block-field-blocknodeteamtitle{
+     font-size: 30px;
+     color: $maintxt;
+   }
+   .field--name-field-image-team{
+     img{
+       margin: 15px auto 15px;
+     }
+   }
+   .field--name-field-profession{
+     font-size: 25px;
+     color: $blue;
+     margin-top: 20px;
+   }
+   .social-media-links--platforms{
+     display: flex;
+     justify-content: center;
+     li{
+       width: 40px;
+       margin: 0 10px;
+     }
+   }
+ }
+.clients-content{
+  padding: 0 20px;
+}

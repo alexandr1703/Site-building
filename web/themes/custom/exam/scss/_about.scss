@@ -1,0 +1,47 @@
+@import "mixin-and-variables";
+.about__block{
+  display: flex;
+  align-items: center;
+  border-bottom: 5px solid $blue;
+  border-top: 5px solid black;
+  margin: 70px auto;
+  h4{
+    @include head;
+    margin-right: 30px;
+  }
+  h6{
+    color: $bigtittle;
+    text-align: center;
+    font-size: 19px;
+  }
+  p{
+    display: block;
+    margin-left: 50px;
+    a{
+      @include btn;
+    }
+  }
+
+}
+@media (max-width: 991px){
+  .about__block {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    h4{
+      margin-right: 0;
+    }
+    p{
+      margin: 0 0 17px 0;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .about__block{
+    margin: 20px auto;
+  }
+}
+#block-about{
+  padding: 0 25px;
+}
